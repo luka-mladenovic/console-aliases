@@ -39,7 +39,11 @@ gss         = git status -s
 ##### Git logging
 ```
 dog         = git log --all --decorate --oneline --graph
-gl          = git log --oneline --all --graph --decorate  $*
+gl          = git log --oneline --graph --decorate  $*
+gll         = git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+wdiff       = git diff --color-words
+gfl         = git log -u
+```
 gll         = git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 wdiff       = git diff --color-words
 gfl         = git log -u
@@ -69,6 +73,7 @@ ga          = git add $*
 gaa         = git add -A
 gc          = git commit
 gca         = git commit --amend
+gcm         = git commit -m $*
 gcaa        = git commit -A --amend
 addcom      = git add -A && git commit -m $*
 save        = git add -A && git commit -m 'Work in progress'
@@ -80,3 +85,8 @@ gresh       = git reset HEAD --hard
 grev        = git revert
 gcln        = git clean -fdx
 ```
+##### Git rebase
+```
+grem        = git rebase master
+gred        = git rebase develop
+greb        = git rebase $* 

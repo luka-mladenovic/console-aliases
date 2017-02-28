@@ -33,7 +33,8 @@ gs=git status
 gss=git status -s
 ga=git add $*
 gaa=git add -A
-gc=git commit
+gc=git commit    
+gcm=git commit -m $*
 gca=git commit --amend
 gcaa=git commit -A --amend
 addcom=git add -A && git commit -m $*
@@ -55,8 +56,11 @@ grev=git revert
 gcln=git clean -fdx
 branchcd=git branch --sort=-committerdate
 branchcdr=git for-each-ref --sort=-committerdate refs/heads/
-gl=git log --oneline --all --graph --decorate  $*
+gl=git log --oneline --graph --decorate  $*
 gll=git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 dog=git log --all --decorate --oneline --graph
 wdiff=git diff --color-words
 gfl=git log -u
+grem=git rebase master
+gred=git rebase develop
+greb=git rebase $* 
