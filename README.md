@@ -41,11 +41,7 @@ gss         = git status -s
 dog         = git log --all --decorate --oneline --graph
 gl          = git log --oneline --graph --decorate  $*
 gll         = git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-wdiff       = git diff --color-words
-gfl         = git log -u
-```
-gll         = git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-wdiff       = git diff --color-words
+wdiff       = git diff --color-words    
 gfl         = git log -u
 ```
 ##### Git stashing
