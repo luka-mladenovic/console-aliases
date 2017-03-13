@@ -43,6 +43,7 @@ gist=git stash
 gisl=git stash list
 gisa=git stash apply
 gisp=git stash pop
+gisp-sel=git stash pop stash@{$*}
 gisb=git stash branch $*
 giss=git stash show -p stash@{$*}
 gdev=git checkout develop
@@ -53,7 +54,9 @@ gmer=git merge --no-ff $*
 gres=git reset
 gresh=git reset HEAD --hard
 grev=git revert
-gcln=git clean -fdx
+gcln=git clean -fd
+gcln-all=git clean -fdx
+gb=git branch
 branchcd=git branch --sort=-committerdate
 branchcdr=git for-each-ref --sort=-committerdate refs/heads/
 gl=git log --oneline --graph --decorate  $*
@@ -64,3 +67,4 @@ gfl=git log -u
 grem=git rebase master
 gred=git rebase develop
 greb=git rebase $* 
+

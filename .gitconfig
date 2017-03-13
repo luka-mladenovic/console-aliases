@@ -11,7 +11,8 @@
     st = stash
     stl = stash list
     sta = stash apply
-    stp = stash pop
+    stp = stash pop    
+    stp-sel = !sh -c 'git stash pop stash@{$1}' -
     stb = !sh -c 'git stash branch $1' -
     sts = !sh -c 'git stash show -p stash@{$1}' -
     dev = checkout develop
@@ -22,7 +23,8 @@
     res = reset
     resh = reset HEAD --hard
     rev = revert
-    cln = clean -fdx
+    cln = clean -fd
+    cln-all = clean -fdx
     branchcd = branch --sort=-committerdate
     branchcdr = for-each-ref --sort=-committerdate refs/heads/
     l = !sh -c 'git log --oneline --graph --decorate  $1' -
@@ -33,3 +35,4 @@
     grem = rebase master
     gred = rebase develop
     greb = !sh -c 'git rebase $1 ' -
+    b = branch

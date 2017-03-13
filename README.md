@@ -50,11 +50,13 @@ gist        = git stash
 gisl        = git stash list
 gisa        = git stash apply
 gisp        = git stash pop
+gisp-sel    = git stash pop stash@{$*}
 gisb        = git stash branch $*
 giss        = git stash show -p stash@{$*}
 ```
 ##### Git branching
 ```
+gb          = git branch
 gdev        = git checkout develop
 gmas        = git checkout master
 gica        = git checkout $*
@@ -79,7 +81,8 @@ save        = git add -A && git commit -m 'Work in progress'
 gres        = git reset
 gresh       = git reset HEAD --hard
 grev        = git revert
-gcln        = git clean -fdx
+gcln        = git clean -fd
+gcln-all    = git clean -fdx
 ```
 ##### Git rebase
 ```
