@@ -1,32 +1,37 @@
-[alias]    	
-    s = status   
-	ss = status -s   
+[alias]
+    s = status
+	ss = status -s
     a = !sh -c 'git add $1' -
-    aa = add -A
+    aa = add --all
     c = commit
     ca = commit --amend
     cm = !sh -c 'commit -m $1' -
-    addcom = !sh -c 'git add -A && git commit -m $1' -
-    save = !sh -c 'git add -A && git commit -m 'Work in progress''
+    amend = !sh -c 'git add --all && git commit --amend' -
+    commit = !sh -c 'git add --all && git commit -m $1' -
+    save = !sh -c 'git add --all && git commit -m 'Work in progress'' -
+    pp = !sh -c 'git pull && git push' -
     st = stash
     stl = stash list
     sta = stash apply
-    stp = stash pop    
+    stp = stash pop
     stp-sel = !sh -c 'git stash pop stash@{$1}' -
     stb = !sh -c 'git stash branch $1' -
     sts = !sh -c 'git stash show -p stash@{$1}' -
+    b = branch
     dev = checkout develop
     mas = checkout master
-    co = !sh -c 'git checkout $1' -
-    cob = !sh -c 'git checkout -b $1 ' -
+    ca = !sh -c 'git checkout $1' -
+    cb = !sh -c 'git checkout -b $1 ' -
     mer = !sh -c 'git merge --no-ff $1 ' -
+    branchcd = branch --sort=-committerdate
+    branchcdr = for-each-ref --sort=-committerdate refs/heads/
     res = reset
     resh = reset HEAD --hard
+    undo-commit = reset HEAD~1
     rev = revert
     cln = clean -fd
     cln-all = clean -fdx
-    branchcd = branch --sort=-committerdate
-    branchcdr = for-each-ref --sort=-committerdate refs/heads/
+    nah=git checkout .
     l = !sh -c 'git log --oneline --graph --decorate  $1' -
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     dog = log --all --decorate --oneline --graph
@@ -35,4 +40,3 @@
     grem = rebase master
     gred = rebase develop
     greb = !sh -c 'git rebase $1 ' -
-    b = branch
