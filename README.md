@@ -8,7 +8,7 @@ Small collection of aliases for commonly used console commands.
 tinker      = php artisan tinker
 phpmig      = php artisan migrate
 phpref      = php artisan migrate:refresh
-phpfresh	= php artisan migrate:fresh
+phpfresh    = php artisan migrate:fresh
 phpreset    = php artisan migrate:reset
 phproll     = php artisan migrate:rollback $*
 phpseed     = php artisan db:seed
@@ -19,13 +19,13 @@ cdump       = composer dump-autoload
 ```
 ##### Testing
 ```
-glt     	= gulp test
-glw     	= gulp watch
+glt         = gulp test
+glw         = gulp watch
 
-unit		= phpunit
-group		= phpunit --group=$*
-filter		= phpunit --filter=$*
-suite		= phpunit --testsuite=$*
+unit        = phpunit
+group       = phpunit --group=$*
+filter      = phpunit --filter=$*
+suite       = phpunit --testsuite=$*
 ```
 ##### Git common
 ```
@@ -38,7 +38,7 @@ gss         = git status -s
 dog         = git log --all --decorate --oneline --graph
 gl          = git log --oneline --graph --decorate  $*
 gll         = git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-wdiff       = git diff --color-words    
+wdiff       = git diff --color-words
 gfl         = git log -u
 ```
 ##### Git stashing
@@ -69,14 +69,14 @@ gaa         = git add --all
 gc          = git commit
 gca         = git commit --amend
 gcm         = git commit -m $*
-amend		= git add --all && git commit --all --amend
-commit		= git add --all && git commit -m $*
+amend       = git add --all && git commit --all --amend
+commit      = git add --all && git commit -m $*
 save        = git add --all && git commit -m 'Work in progress'
-gpp			= git pull && git push
+gpp         = git pull && git push
 ```
 ##### Git undo
 ```
-nah			= git checkout .
+nah         = git checkout .
 gres        = git reset
 gresh       = git reset HEAD --hard
 undo-commit = git reset HEAD~1
@@ -88,5 +88,5 @@ gcln-all    = git clean -fdx
 ```
 grem        = git rebase master
 gred        = git rebase develop
-greb        = git rebase $* 
+greb        = git rebase $*
 ```
